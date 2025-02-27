@@ -54,6 +54,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/double16/kaldi-vosk-server
+          tags: |
+            type=semver,pattern={{version}}
+            ${{ github.ref == 'refs/heads/master' && 'type=raw,value=latest' || '' }}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
@@ -101,6 +104,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/double16/kaldi-${{ matrix.kind }}
+          tags: |
+            type=semver,pattern={{version}}
+            ${{ github.ref == 'refs/heads/master' && 'type=raw,value=latest' || '' }}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
@@ -146,6 +152,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/double16/kaldi-vosk-server-gpu
+          tags: |
+            type=semver,pattern={{version}}
+            ${{ github.ref == 'refs/heads/master' && 'type=raw,value=latest' || '' }}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
@@ -193,6 +202,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/double16/kaldi-${{ matrix.kind }}-gpu
+          tags: |
+            type=semver,pattern={{version}}
+            ${{ github.ref == 'refs/heads/master' && 'type=raw,value=latest' || '' }}
         env:
           DOCKER_METADATA_ANNOTATIONS_LEVELS: manifest,index
 
