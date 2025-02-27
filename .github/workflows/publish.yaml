@@ -61,7 +61,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: docker
-          file: Dockerfile.kaldi-vosk-server
+          file: docker/Dockerfile.kaldi-vosk-server
           build-args: |
             KALDI_MKL=0
           platforms: linux/amd64
@@ -108,7 +108,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: docker
-          file: Dockerfile.kaldi-vosk-server-gpu
+          file: docker/Dockerfile.kaldi-vosk-server-gpu
           build-args: |
             KALDI_MKL=0
           platforms: linux/amd64
