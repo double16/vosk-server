@@ -1,4 +1,4 @@
-FROM alphacep/kaldi-en:latest
+FROM ghcr.io/double16/kaldi-en:latest
 
 RUN pip3 install grpcio-tools \
     && cd /opt/vosk-server/grpc \

@@ -1,4 +1,4 @@
-FROM alphacep/kaldi-vosk-server
+FROM ghcr.io/double16/kaldi-vosk-server
 
 RUN cd /opt \
   && wget -q https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.gz \
