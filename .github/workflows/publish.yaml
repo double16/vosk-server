@@ -81,7 +81,7 @@ jobs:
     needs: [vosk-server-cpu]
     strategy:
       matrix:
-        kind: ["en", "en-spk", "es"]
+        kind: ["ru", "en", "de", "cn", "fr", "es", "en-in", "grpc-en", "en-spk", "ja", "hi"]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
