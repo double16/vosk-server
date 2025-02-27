@@ -1,5 +1,10 @@
 ## About
 
+---
+This fork provides recent docker builds. It also changes the English model from 0.22
+to 0.42-gigaspeech.
+---
+
 This is a server for highly accurate offline speech recognition using
 Kaldi and [Vosk-API](https://github.com/alphacep/vosk-api).
 
